@@ -78,6 +78,11 @@ class ProduceSearchBTree
         t15.left =null;
         t15.right =null;
      
+        // ----------destroy code
+        // t8.value=6;
+        // t6.value =8;
+        // ----------destroy code
+
 
 		head=t8;
 

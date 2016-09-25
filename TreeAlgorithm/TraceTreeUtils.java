@@ -4,23 +4,23 @@ import java.util.*;
   */
 class TraceTreeUtils
 {
-   public static void main(String[] args) {
-   	    produceTree t = new produceTree();
-		TreeNode head = t.head;
+  //  public static void main(String[] args) {
+  //  	    produceTree t = new produceTree();
+		// TreeNode head = t.head;
 
-	    System.out.println("pre----------------------");
-	    preTreeByReturn(head);
-	    System.out.println("pre----------------------");
-        preTraceUStack(head);
+	 //    System.out.println("pre----------------------");
+	 //    preTreeByReturn(head);
+	 //    System.out.println("pre----------------------");
+  //       preTraceUStack(head);
 
-	    System.out.println("mid----------------------");
-	    midTreeByReturn(head);
-	    System.out.println("mid----------------------");
-	    midTraceUStack(head);
+	 //    System.out.println("mid----------------------");
+	 //    midTreeByReturn(head);
+	 //    System.out.println("mid----------------------");
+	 //    midTraceUStack(head);
 
-	    // System.out.println("aft----------------------");
-	    // aftTreeByReturn(head);
-   }
+	 //    // System.out.println("aft----------------------");
+	 //    // aftTreeByReturn(head);
+  //  }
    /**
     * 前序遍历 递归版
     */
@@ -58,7 +58,7 @@ class TraceTreeUtils
    }
  
   /**
-   *前序遍历 非递归版 利用栈
+   * 前序遍历 非递归版 利用栈
    */
   public static void preTraceUStack(TreeNode head){
   	   Stack<TreeNode> s = new Stack<TreeNode>();
@@ -100,9 +100,9 @@ class TraceTreeUtils
    *后序遍历 非递归版 利用栈
    */
  public static void aftTraceUStack(TreeNode head){
- 	if (head == null) {
- 		return;
- 	}
+     	if (head == null) {
+     		return;
+     	}
      Stack<TreeNode> s1 = new Stack<TreeNode>();
      Stack<TreeNode> s2 = new Stack<TreeNode>();
      TreeNode node = head;
