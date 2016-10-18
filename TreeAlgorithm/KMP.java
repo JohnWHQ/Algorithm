@@ -1,10 +1,19 @@
 class KMP
 {
 	public static void main(String[] args) {
-		String s = "acdefbc";
-		String m = "efbcd";
-		System.out.println(match_normal(s,m));
-		System.out.println(match_KMP(s,m));
+		// String s = "acdefbc";
+		// String m = "efbcd";
+		// System.out.println(match_normal(s,m));
+		// System.out.println(match_KMP(s,m));
+
+	    String s1 = "aaaaabcdabceabcdeagh";
+		String s2 = "abcdabceabcdeag";
+		System.out.println(match_KMP(s1,s2));
+		int[] arr = getNextArr(s2.toCharArray());
+
+        for (int x : arr) {
+			System.out.println(x);        	
+        }
 	}
 	/**
 	 *普通匹配方式
@@ -79,7 +88,7 @@ class KMP
 		int pos =2;
 
 		while(pos < mArr.length) {
-			if (nextArr[pos - 1] == nextArr[cn]) {
+			if (mArr[pos - 1] == mArr[cn]) {
 				nextArr[pos++] = ++cn;
 			}else if (cn > 0) {
 				cn = nextArr[cn];
