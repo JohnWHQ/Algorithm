@@ -7,7 +7,7 @@ class rotateStr{
 		String s2 = "fghijkabcde";
 		System.out.println(isRotation(s1,s2));
 	}
-	
+	  
 	public static boolean isRotation(String str1,String str2){
 		if (str1 == null || str2 == null || str1.length()<1 || str2.length()<1 || str1.length() != str2.length()) {
 			return false;
