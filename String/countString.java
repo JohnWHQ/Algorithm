@@ -3,9 +3,7 @@ class countString{
 
 		System.out.println(getCountString("aaabbadddffc"));
 
-		System.out.println(getCharAt("a_100_b_2_c_4",105));
-
-		
+		System.out.println(getCharAt("a_100_b_2_c_4",105));	
 	}
 	public static String getCountString(String str){
 		if (str == null || str.length() < 1) {
@@ -25,7 +23,6 @@ class countString{
 		res = res + "_" + num;
 		return res;
 	}
-
 	public static char getCharAt(String str ,int index){
 		if (str == null || str.length() < 1) {
 			return 0;
