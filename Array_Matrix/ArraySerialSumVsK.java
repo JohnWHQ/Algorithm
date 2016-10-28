@@ -6,6 +6,9 @@ class ArraySerialSumVsK{
 
 		int[] arr2 = {1,2,3,3,0,-1,1,0,6,-6,7};
 		System.out.println(getUnsortArrayPNSumKLen(arr2,6));
+
+		int[] arr3 = {3,-2,-4,0,6};
+		System.out.println(getUnsortArrayPNSumSmallerKLen(arr3,-2));
 		
 
 	}
@@ -39,6 +42,7 @@ class ArraySerialSumVsK{
 		return len;
 	}
 
+	// find most lens of subarray sum equals k in unsorted poisitive  or nagtive array
 	public static int getUnsortArrayPNSumKLen(int[] arr , int k){
 		if (arr == null || arr.length < 1) {
 			return 0;
@@ -57,4 +61,57 @@ class ArraySerialSumVsK{
 		}
 		return len;
 	}
+
+
+	public static int getUnsortArrayPNSumSmallerKLen(int[] arr ,int k){
+		if (arr == null || arr.length < 1) {
+			return 0;
+		}
+		// produce MAX array
+		int[] help = new int[arr.length + 1];
+		help[0] = 0;
+		int sum = 0;
+		for (int i = 0; i < arr.length ; i++ ) {
+			sum = sum + arr[i];
+			help[i+1] = Math.max(sum,help[i]);
+		}
+
+		sum = 0;
+		int res = 0;
+		int len = 0;
+		int pre = 0;
+		for (int i = 0; i < arr.length ; i++ ) {
+			sum = sum + arr[i];
+			pre = getIndexLeft(help,sum - k);
+			len = pre == -1? 0 : i - pre + 1;
+			res = Math.max(res,len);
+		}
+		return res;
+	}
+
+	public static int getIndexLeft(int[] arr,int k){
+		int r = arr.length - 1 ;
+		int l = 0;
+		int mid;
+		int res = -1;
+		while(l < r){
+			mid = (l + r)/2;
+			if (arr[mid] >= k) {
+				res = mid;
+				r = mid - 1;
+			}else{
+				l = mid + 1;
+			}
+		}
+		return res;
+	}
+
+
+
+
+
+
+
+
+
 }
