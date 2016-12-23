@@ -1,7 +1,7 @@
 class HeapSort{
 	public static void main(String[] args) {
-		int[] test = {10,9,8,7,6,5,4,3,2,1};
-		// int[] test = {5,9,6,8,7};
+		// int[] test = {10,9,8,7,6,5,4,3,2,1};
+		int[] test = {5,9,6,8,7};
 		sort(test);
 		for (int i = 0; i < test.length ; i++ ) {
 			System.out.println(test[i]);	
