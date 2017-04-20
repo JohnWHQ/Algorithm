@@ -1,8 +1,21 @@
 import java.util.*;
 class UseEnum{
 	public static void main(String[] args) {
-		enumTest.ONE.setVal("fuck");
-		System.out.println(enumTest.ONE.getVal());
+		// enumTest.ONE.setVal("test");
+		// System.out.println(enumTest.ONE.getVal());
+
+		// enumTest e1 = enumTest.ONE;
+		// System.out.println("e1:" + e1.getVal());
+
+		// enumTest.ONE.setVal("test");
+		// enumTest e2 = enumTest.ONE;
+		// System.out.println("e2:" + e2.getVal());
+
+		// System.out.println("e1: last" + e1.getVal());
+
+		// System.out.println(e1.equals(e2));
+
+		System.out.println(enumTest.ONE);
 	}
 	public enum enumTest{
 		ONE("TEST1"),
