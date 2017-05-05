@@ -8,7 +8,7 @@ class ExpressTFCount{
 		System.out.println(getExpressTFCount("0",true));
 	}
 	public static int getExpressTFCount(String str,boolean b){
-		if (str == null || str.length() == 0) {
+		if (str == null || str.lengtxh() == 0) {
 			return 0;
 		}
 		char[] carr = str.toCharArray();
