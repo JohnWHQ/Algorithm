@@ -16,6 +16,6 @@ class c3_16_SortArray2AVLBST{
 		TreeNode node = new TreeNode(arr[mid]);
 		node.left = build(arr, start, mid - 1);
 		node.right = build(arr, mid + 1, end);
-		return node;
+		return node; 
 	}
 }

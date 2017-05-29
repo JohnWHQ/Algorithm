@@ -46,3 +46,4 @@ class c3_21_01_TraceBuildTree{
 		node.right = midPosbuild(mid, index + 1, mj, pos, pi + index - mi, pj - 1, map);
 	}
 }
+
